@@ -1,24 +1,24 @@
 <script lang="ts" setup>
   import { ref } from 'vue'
-  const number = ref(0)
+  const counter = ref(0)
   const buttonIncrementText = 'Incrementar'
   const buttonDecrementText = 'Decrementar'
 
   function incrementNumber() {
-    return number.value++
+    return counter.value++
   }
   function decrementNumber() {
-    return number.value--
+    return counter.value--
   }
 </script>
 <template>
   <section class="cnt-container">
-    <span>{{ number }}</span>
+    <span>{{ counter }}</span>
     <div class="cnt-container__buttons-container">
-      <button class="cnt-container__button" @click="decrementNumber">
+      <button v-if="counter > 0" class="cnt-container__button" @click="decrementNumber">
         {{ buttonDecrementText }}
       </button>
-      <button class="cnt-container__button" @click="incrementNumber">
+      <button v-if="counter < 10" class="cnt-container__button" @click="incrementNumber">
         {{ buttonIncrementText }}
       </button>
     </div>
