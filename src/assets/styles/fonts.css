@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'hack-regular';
+  src: url('@/assets/styles/fonts/Hack-Regular.ttf') format('truetype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'hack-regular-italic';
+  src: url('@/assets/styles/fonts/Hack-Italic.ttf') format('truetype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'hack-bold';
+  src: url('@/assets/styles/fonts/Hack-Bold.ttf') format('truetype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'hack-bold-italic';
+  src: url('@/assets/styles/fonts/Hack-BoldItalic.ttf') format('truetype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}

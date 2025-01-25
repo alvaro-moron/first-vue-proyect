@@ -18,7 +18,16 @@ export default defineConfigWithVueTs(
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
   vueTsConfigs.recommended,
   skipFormatting,
+  {
+    rules: {
+      'vue/no-unused-vars': 'warn',
+      'vue/multi-word-component-names': 'off',
+      'vue/no-multiple-template-root': 'error',
+      'no-console': 'warn',
+      'no-debugger': 'error',
+    },
+  }
 )
