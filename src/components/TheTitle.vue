@@ -1,7 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  defineProps({
+    propTitle: {
+      type: String,
+      required: true,
+    },
+  })
+</script>
 <template>
   <section class="title-container">
-    <h2 class="title-container__subTitle">This is the main subtitle</h2>
+    <h2 class="title-container__subTitle">{{ propTitle }}</h2>
   </section>
 </template>
 <style scoped lang="scss">
