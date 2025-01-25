@@ -1,14 +1,7 @@
-<script lang="ts" setup>
-  defineProps({
-    propTitle: {
-      type: String,
-      required: true,
-    },
-  })
-</script>
+<script lang="ts" setup></script>
 <template>
   <section class="title-container">
-    <h2 class="title-container__subTitle">{{ propTitle }}</h2>
+    <h2 class="title-container__subTitle"><slot /></h2>
   </section>
 </template>
 <style scoped lang="scss">

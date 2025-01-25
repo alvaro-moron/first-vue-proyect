@@ -5,7 +5,7 @@
 
 <template>
   <section class="container">
-    <TheTitle :prop-title="title" />
+    <TheTitle>{{ title }}</TheTitle>
   </section>
 </template>
 
