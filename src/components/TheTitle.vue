@@ -6,8 +6,8 @@
 </template>
 <style scoped lang="scss">
   .title-container {
+    margin: 2em 0;
     &__subTitle {
-      margin: 2em 0;
       text-align: center;
     }
   }
