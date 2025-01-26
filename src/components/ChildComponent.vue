@@ -1,9 +1,17 @@
 <script setup lang="ts">
+  import { /*ref,*/ inject, type Ref } from 'vue'
+
   const title = 'Soy el hijo'
   const emit = defineEmits(['sayHi', 'sayHiFaster'])
   function sayHi() {
     emit('sayHi', { message: 'Hola desde el componente hijo' })
   }
+
+  // const message = inject<Ref<string | string>>(
+  //   'message',
+  //   ref('Mostrando valor predeterminado')
+  // )
+  const message = inject<Ref<string | string>>('message')!
 </script>
 <template>
   <section class="container-child">
@@ -17,6 +25,7 @@
     >
       Saludar desde el hijo más rápido
     </button>
+    <p class="container-child__text">{{ message }}</p>
   </section>
 </template>
 <style scoped lang="scss">
@@ -39,6 +48,9 @@
     }
     &__button:hover {
       background-color: transparent;
+    }
+    &__text {
+      margin: 2em 0;
     }
   }
 </style>

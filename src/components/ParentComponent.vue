@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { provide, ref } from 'vue'
   import ChildComponent from '@/components/ChildComponent.vue'
   const title = 'Soy el padre'
   const msg = ref('')
@@ -11,6 +11,9 @@
   function receiveSayHi(dataReceive: info) {
     msg.value = `Información recibida del hijo: ${dataReceive.message}`
   }
+
+  const message = ref('Hola usando provide e inject')
+  provide('message', message)
 </script>
 <template>
   <section class="container-parent">
