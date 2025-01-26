@@ -1,24 +1,27 @@
 <script lang="ts" setup>
-  import { ref } from 'vue'
-  const counter = ref(0)
+  import { useAddOrSubtract } from '@/composables/useAddOrSubtract'
+
   const buttonIncrementText = 'Incrementar'
   const buttonDecrementText = 'Decrementar'
 
-  function incrementNumber() {
-    return counter.value++
-  }
-  function decrementNumber() {
-    return counter.value--
-  }
+  const { counter, incrementNumber, decrementNumber } = useAddOrSubtract()
 </script>
 <template>
   <section class="cnt-container">
     <span>{{ counter }}</span>
     <div class="cnt-container__buttons-container">
-      <button v-if="counter > 0" class="cnt-container__button" @click="decrementNumber">
+      <button
+        v-if="counter > 0"
+        class="cnt-container__button"
+        @click="decrementNumber()"
+      >
         {{ buttonDecrementText }}
       </button>
-      <button v-if="counter < 10" class="cnt-container__button" @click="incrementNumber">
+      <button
+        v-if="counter < 10"
+        class="cnt-container__button"
+        @click="incrementNumber()"
+      >
         {{ buttonIncrementText }}
       </button>
     </div>
