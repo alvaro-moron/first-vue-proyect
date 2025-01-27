@@ -1,14 +1,19 @@
 <script lang="ts" setup>
   import { useAddOrSubtract } from '@/composables/useAddOrSubtract'
+  import { computed } from 'vue'
 
   const buttonIncrementText = 'Incrementar'
   const buttonDecrementText = 'Decrementar'
 
   const { counter, incrementNumber, decrementNumber } = useAddOrSubtract()
+
+  const changeColor = computed(() => ({
+    color: counter.value >= 10 ? 'lightgreen' : 'initial',
+  }))
 </script>
 <template>
   <section class="cnt-container">
-    <span>{{ counter }}</span>
+    <span :style="changeColor">{{ counter }}</span>
     <div class="cnt-container__buttons-container">
       <button
         v-if="counter > 0"
