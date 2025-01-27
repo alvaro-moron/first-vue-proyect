@@ -7,9 +7,9 @@
 
   const { counter, incrementNumber, decrementNumber } = useAddOrSubtract()
 
-  const changeColor = computed(() =>
+  const changeColor = computed(() => ({
     color: counter.value >= 10 ? 'lightgreen' : 'initial',
-  )
+  }))
   const multiplyCounter = computed(() => counter.value * 2)
 </script>
 <template>
