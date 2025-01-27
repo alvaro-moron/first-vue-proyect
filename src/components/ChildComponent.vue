@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { /*ref,*/ inject, type Ref } from 'vue'
+  import { inject } from 'vue'
 
   const title = 'Soy el hijo'
   const emit = defineEmits(['sayHi', 'sayHiFaster'])
@@ -7,11 +7,7 @@
     emit('sayHi', { message: 'Hola desde el componente hijo' })
   }
 
-  // const message = inject<Ref<string | string>>(
-  //   'message',
-  //   ref('Mostrando valor predeterminado')
-  // )
-  const message = inject<Ref<string | string>>('message')!
+  const message = inject<string>('message')
 </script>
 <template>
   <section class="container-child">
