@@ -7,13 +7,15 @@
 
   const { counter, incrementNumber, decrementNumber } = useAddOrSubtract()
 
-  const changeColor = computed(() => ({
+  const changeColor = computed(() =>
     color: counter.value >= 10 ? 'lightgreen' : 'initial',
-  }))
+  )
+  const multiplyCounter = computed(() => counter.value * 2)
 </script>
 <template>
   <section class="cnt-container">
     <span :style="changeColor">{{ counter }}</span>
+    <span>{{ `Número multiplicado por 2: ${multiplyCounter}` }}</span>
     <div class="cnt-container__buttons-container">
       <button
         v-if="counter > 0"
