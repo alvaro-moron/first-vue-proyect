@@ -1,6 +1,7 @@
 import './assets/styles/reset.css'
-import './assets/styles/fonts.css'
+// import './assets/styles/fonts.css'
 import './assets/styles/variables.css'
+import '@fontsource-variable/nunito'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
