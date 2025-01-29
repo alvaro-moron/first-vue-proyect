@@ -7,7 +7,7 @@
   <section class="catalog-container">
     <article
       v-for="product in productsMock"
-      :key="product.title"
+      :key="product.id"
       class="catalog-container__card"
     >
       <ProductCard :product="product" />
@@ -24,18 +24,7 @@
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 1em;
     &__button {
-      width: fit-content;
-      height: fit-content;
-      margin: auto auto;
-      background-color: lightgreen;
-      padding: 0.5em;
-      border-radius: 0.5em;
-      cursor: pointer;
-      transition: ease-in-out 0.2s;
-      border: 0.125rem solid lightgreen;
-    }
-    &__button:hover {
-      background-color: transparent;
+      @include linkLikeMainButton();
     }
   }
 </style>

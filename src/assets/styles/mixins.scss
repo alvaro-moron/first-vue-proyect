@@ -1,0 +1,14 @@
+@mixin linkLikeMainButton() {
+  width: fit-content;
+  height: fit-content;
+  margin: auto auto;
+  background-color: lightgreen;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  border: 0.125rem solid lightgreen;
+  &:hover {
+    background-color: transparent;
+  }
+}

@@ -1,5 +1,6 @@
 const productsMock = [
   {
+    id: 1,
     image: 'https://picsum.photos/400/250/?random',
     title: 'Producto 1',
     description: 'Este es el primer producto, con características increíbles.',
@@ -7,6 +8,7 @@ const productsMock = [
     button: 'Añadir al carrito',
   },
   {
+    id: 2,
     image: 'https://picsum.photos/400/250/?random+1',
     title: 'Producto 2',
     description: 'Un producto excelente para el día a día.',
@@ -14,6 +16,7 @@ const productsMock = [
     button: 'Comprar ahora',
   },
   {
+    id: 3,
     image: 'https://picsum.photos/400/250/?random+2',
     title: 'Producto 3',
     description: 'Calidad garantizada para el tercer producto.',
@@ -21,6 +24,7 @@ const productsMock = [
     button: 'Ver más',
   },
   {
+    id: 4,
     image: 'https://picsum.photos/400/250/?random+3',
     title: 'Producto 4',
     description: 'Este producto destaca por su relación calidad-precio.',
@@ -28,6 +32,7 @@ const productsMock = [
     button: 'Añadir al carrito',
   },
   {
+    id: 5,
     image: 'https://picsum.photos/400/250/?random+4',
     title: 'Producto 5',
     description: 'Último producto de la lista, ideal para cualquier ocasión.',

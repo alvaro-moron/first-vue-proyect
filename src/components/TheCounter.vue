@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { useAddOrSubtract } from '@/composables/useAddOrSubtract'
   import { computed } from 'vue'
+  import TheButton from '@/components/TheButton.vue'
 
   const buttonIncrementText = 'Incrementar'
   const buttonDecrementText = 'Decrementar'
@@ -17,20 +18,12 @@
     <span :style="changeColor">{{ counter }}</span>
     <span>{{ `Número multiplicado por 2: ${multiplyCounter}` }}</span>
     <div class="cnt-container__buttons-container">
-      <button
-        v-if="counter > 0"
-        class="cnt-container__button"
-        @click="decrementNumber()"
-      >
+      <TheButton v-if="counter > 0" @click="decrementNumber">
         {{ buttonDecrementText }}
-      </button>
-      <button
-        v-if="counter < 10"
-        class="cnt-container__button"
-        @click="incrementNumber()"
-      >
+      </TheButton>
+      <TheButton v-if="counter < 10" @click="incrementNumber">
         {{ buttonIncrementText }}
-      </button>
+      </TheButton>
     </div>
   </section>
 </template>
@@ -44,17 +37,6 @@
     &__buttons-container {
       display: flex;
       gap: 1em;
-    }
-    &__button {
-      background-color: lightgreen;
-      padding: 0.5em;
-      border-radius: 0.5em;
-      cursor: pointer;
-      transition: ease-in-out 0.2s;
-      border: 0.125rem solid lightgreen;
-    }
-    &__button:hover {
-      background-color: transparent;
     }
   }
 </style>

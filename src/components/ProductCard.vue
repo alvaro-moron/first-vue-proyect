@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-  const props = defineProps({
+  import TheButton from '@/components/TheButton.vue'
+
+  defineProps({
     product: {
       type: Object,
       required: true,
@@ -8,12 +10,12 @@
 </script>
 <template>
   <section class="card-container">
-    <h2 class="card-container__title">{{ props.product.title }}</h2>
-    <img :src="props.product.image" alt="Imagen del card" />
-    <p class="card-container__description">{{ props.product.description }}</p>
+    <h2 class="card-container__title">{{ product.title }}</h2>
+    <img :src="product.image" alt="Imagen del card" />
+    <p class="card-container__description">{{ product.description }}</p>
     <div class="card-container__price-btn-block">
-      <p class="card-container__price">{{ props.product.price }}</p>
-      <button class="card-container__button">{{ props.product.button }}</button>
+      <p class="card-container__price">{{ product.price }}</p>
+      <TheButton>{{ product.button }}</TheButton>
     </div>
   </section>
 </template>
@@ -30,6 +32,7 @@
     &__price-btn-block {
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
     }
   }
 </style>
